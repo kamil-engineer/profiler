@@ -36,11 +36,13 @@
 
 :root {
   --color-white: #ffffff;
-  --color-gray-500: #9aa7be;
-  --color-teal-500: #2ab3b1;
-  --color-teal-400: #4abfbd;
-  --color-teal-100: #e6eff5;
-  --color-green-400: #c0df33;
+  --color-gray-500: #6b7082;
+  --color-gray-100: #e8e9ec;
+  --color-blue-600: #19a1ae;
+  --color-blue-400: #41cbd3;
+  --color-navy-950: #2e3349;
+
+  --color-gradient: linear-gradient(to bottom, #53ffee, #0989b4);
 
   --font-general: "Kumbh Sans", "sans-serif";
 
@@ -77,4 +79,100 @@
 
 body {
   font-family: var(--font-general);
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 var(--space-4);
+  background-color: var(--color-blue-600);
+}
+
+.card {
+  --width: 21.875rem;
+  --height: 23.375rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: var(--height);
+  max-width: var(--width);
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 50px 100px rgba(8, 70, 94, 25%);
+  background-color: var(--color-white);
+  padding-bottom: var(--space-5);
+}
+
+.card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__info {
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.card__author-image {
+  border-radius: 50%;
+  border: 5px solid var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.author__name {
+  color: var(--color-navy-950);
+  font-size: var(--fs-md);
+  line-height: 125%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.author__age {
+  color: var(--color-gray-500);
+  font-weight: 400;
+}
+
+.author__location {
+  line-height: 125%;
+  font-size: var(--fs-xs);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-5);
+}
+
+.socials {
+  border-top: 1px solid var(--color-gray-100);
+  padding-top: var(--space-5);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-9);
+}
+
+.socials__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.socials__value {
+  color: var(--color-navy-950);
+  line-height: 125%;
+  font-weight: 700;
+  font-size: var(--fs-md);
+}
+
+.socials__title {
+  color: var(--color-gray-500);
+  line-height: 125%;
+  font-size: var(--fs-xxs);
+  letter-spacing: 1.5px;
 }
